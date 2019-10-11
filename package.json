@@ -28,11 +28,11 @@
         "build": "yarn build:typescript && yarn build:neon",
         "build:typescript": "tsc -p .",
         "build:neon": "neon build --release",
-        "lint": "eslint src --ext ts --fix",
+        "lint": "eslint lib --ext ts --fix",
         "clean": "rimraf dist/ native/target",
         "graph": "yarn graph:js && yarn graph:ts",
         "graph:js": "madge dist -i ./deps-graph.js.png",
-        "graph:ts": "madge src --extensions ts -i ./deps-graph.ts.png",
+        "graph:ts": "madge lib --extensions ts -i ./deps-graph.ts.png",
         "start": "node ."
     },
     "devDependencies": {
